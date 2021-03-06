@@ -1,0 +1,28 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: arial, sans-serif;
+  background: black;
+  color: #BBB;
+  margin: 32px;
+}
+
+button {
+  background: #777;
+  color: white;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+span.allocate{
+  cursor: pointer;
+  user-select: none;
+}
