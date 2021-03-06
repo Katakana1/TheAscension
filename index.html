@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>The Ascension</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="varupdates.js"></script>
+    <script src="playerupdates.js"></script>
+    <script src="htmlupdates.js"></script>
+    <script src="break-eternity.js"></script>
+    <script src="load.js"></script>
+    <script src="script.js" defer></script>
+  </head>  
+  <body>
+    <div style="text-align:center">
+      You have a total of <span style="font-size:1.5em;color:yellow" id="energy">1</span> energy (<span id="unalloc">0</span> unallocated, <span id="allocated">1</span> allocated)
+    </div>
+    <div style="text-align:center;display:none" id="flaws-display">
+      You have <span style="font-size:1.5em;color:green" id="flaws">0</span> flaws, dividing energy effectiveness by <span style="font-size:1.5em;color:green" id="flawsEffect">1</span>
+    </div><br>
+    <div style="font-size:24px">
+      <span style="color:#0F0;font-family:monospace" onclick="allocate(1,'skill')" class="allocate">+ </span>|<span style="color:#F00;font-family:monospace" onclick="allocate(-1,'skill')" class="allocate"> -</span>
+      You have <span id="skill" style="font-size:1.5em;color:white;">0.00</span> skill.
+      <span style="font-size:0.66em">(<span id="skillalloc">0</span> energy allocated)</span>
+    </div>
+    <div style="font-size:24px;display:none" id="power-section">
+      <span style="font-weight:bold">Training</span><br>
+      <span style="color:#0F0;font-family:monospace" onclick="allocate(1,'power')" class="allocate">+ </span>|<span style="color:#F00;font-family:monospace" onclick="allocate(-1,'power')" class="allocate"> -</span>
+      You have <span id="power" style="font-size:1.5em;color:yellow;">0.00</span> power, giving <span id="powerEffect" style="font-size:1.5em;color:yellow">0</span> extra energy.
+      <span style="font-size:0.66em">(<span id="poweralloc">0</span> energy allocated)</span>
+    </div>
+    <div style="font-size:24px;display:none" id="stabl-section">
+      <span style="color:#0F0;font-family:monospace" onclick="allocate(1,'stabl')" class="allocate">+ </span>|<span style="color:#F00;font-family:monospace" onclick="allocate(-1,'stabl')" class="allocate"> -</span>
+      You have <span id="stabl" style="font-size:1.5em;color:cyan;">0.00</span> stability, dividing and subtracting flaws by <span id="stablEffect" style="font-size:1.5em;color:cyan">1.00</span>.
+      <span style="font-size:0.66em">(<span id="stablalloc">0</span> energy allocated)</span>
+    </div>
+  </body>
+</html>
